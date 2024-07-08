@@ -1,0 +1,87 @@
+"SNo","API Module","API Name","API URL","API Request","Test Case Type","Expected Status Code","Actual Status code","Test Status","Response Time","Remark","Request Body"
+"1","V1_1_Account","VerifyCIDApiConstant","http://103.19.138.0:8014/api/v1.1/Account/CAVerification","POST","Positive","201","500","Fail","4767 Milliseconds","with request body","{
+  ""CID"": ""110103413189"",
+  ""Type"": 1
+}"
+"2","V1_Account","VerifyOTP","http://103.19.138.0:8014/api/v1/Account/VerifyOTP","POST","Positive","201","500","Fail","67 Milliseconds","with request body","{
+  ""LoginID"": ""110103413189"",
+  ""OTP"": 1111,
+  ""SMSTypeID"": 1
+}"
+"3","V1_1_Account","Registration","http://103.19.138.0:8014/api/v1.1/Account/Registration","POST","Positive","201","430","Fail","1041 Milliseconds","with request body","{
+ ""CANumber"": ""11010224608"",
+ ""CRNNumber"": ""11010224608"",
+""EmailID"": ""kk@esyasoft.com"",
+ ""FullName"": ""Kailash Tester"",
+""MobileNumber"": ""9801881439"",
+""Password"": ""Test@123"",
+ ""ReenterPassword"": ""Test@123""
+}"
+"4","V1_Account","Login","http://103.19.138.0:8014/api/v1/Account/Login","POST","Positive","200","200","Pass","5455 Milliseconds","with request body","{
+  ""LoginID"": ""11010224608"",
+  ""Password"": ""Test@123""
+}"
+"5","V1_Account","SideMenu","http://103.19.138.0:8014/api/v1/Account/SideMenu","POST","Positive","200","200","Pass","126 Milliseconds","with request body","{
+  ""langID"": 1,
+  ""Phase"": 1,
+  ""RoleID"": 1
+}"
+"6","V1_Dashboard","ProfileInformation","http://103.19.138.0:8014/api/v1/Dashboard/ProfileInformation","POST","Positive","200","200","Pass","797 Milliseconds","with request body and token key","{
+  ""LoginID"": ""11010224608""
+}"
+"7","V1_Contact_Us","Notification","http://103.19.138.0:8014/api/v1/ContactUS/Notification","POST","Positive","200","401","Fail","74 Milliseconds","with request body and token key","{
+  ""LoginID"": ""11010224608"",
+  ""MeterID"": 45,
+  ""Phase"": 1
+}"
+"8","V1_Dashboard","AccountDetails","http://103.19.138.0:8014/api/v1/Dashboard/AccountDetails","POST","Positive","200","430","Fail","73 Milliseconds","with request body and token key","{
+  ""LoginID"": ""11010224608""
+}"
+"9","V1_Account","CheckBalance","http://103.19.138.0:8014/api/v1/Account/CheckBalance","POST","Positive","200","440","Fail","72 Milliseconds","with request body","{
+  ""RRNumber"": ""11010224608""
+}"
+"10","V1_Dashboard","Dashboard","http://103.19.138.0:8014/api/v1/Dashboard/Dashboard","POST","Positive","200","200","Pass","126 Milliseconds","with request body","{
+""LoginID"":""11010224608"",
+""MeterID"":45,
+""Phase"":1
+}"
+"11","V1_Dashboard","DayWiseConsumption","http://103.19.138.0:8014/api/v1/Dashboard/DayWiseConsumptionBalance","POST","Positive","200","212","Fail","75 Milliseconds","with request body","{
+""LoginID"":""11010224608"",
+""MeterID"":45,
+""Phase"":1,
+""FromDate"": ""2024-01-01"",
+""ToDate"": ""2024-01-31""
+}
+"
+"12","V1_Dashboard","MeterDetails","http://103.19.138.0:8014/api/v1/Dashboard/MeterDetails","POST","Positive","200","200","Pass","88 Milliseconds","with request body and token key","{
+  ""LoginID"": ""11010224608"",
+  ""MeterID"": 45,
+  ""MeterSequence"": 2
+}"
+"13","V1_Dashboard","MeterSequenceList","http://103.19.138.0:8014/api/v1/Dashboard/MeterSequenceList","GET","Positive","200","600","Fail","432 Milliseconds","with request body and token key",""
+"14","V1_Dashboard","LatestIPData","http://103.19.138.0:8014/api/v1/Dashboard/LatestIPData","POST","Positive","200","212","Fail","70 Milliseconds","with request body and token key","{
+""LoginID"":""11010224608"",
+""MeterID"":45,
+""Phase"":1
+}"
+"15","V1_Dashboard","TarrifDetails","http://103.19.138.0:8014/api/v1/Dashboard/TarrifDetails","POST","Positive","200","200","Pass","76 Milliseconds","with request body and token key","{
+""LoginID"":""11010224608"",
+""MeterID"":45,
+""Phase"":1
+}"
+"16","V1_Dashboard","PayMyBill","http://103.19.138.0:8014/api/v1/Dashboard/PayMyBill","POST","Positive","200","200","Pass","84 Milliseconds","with request body and token key","{
+""LoginID"":""11010224608"",
+""MeterID"":45,
+""Phase"":1
+}"
+"17","V1_Dashboard","PrepaidBilling","http://103.19.138.0:8014/api/v1/Dashboard/PrepaidBilling","POST","Positive","200","200","Pass","103 Milliseconds","with request body and token key","{
+""LoginID"":""11010224608"",
+""MeterID"":45,
+""Phase"":1
+}"
+"18","V1_Dashboard","ProfileInformation","http://103.19.138.0:8014/api/v1/Dashboard/ProfileInformation","POST","Positive","200","200","Pass","99 Milliseconds","with request body and token key","{
+  ""LoginID"": ""11010224608""
+}"
+"19","V1_Dashboard","AccountDetails","http://103.19.138.0:8014/api/v1/Dashboard/AccountDetails","POST","Positive","200","430","Fail","68 Milliseconds","with request body and token key","{
+  ""LoginID"": ""11010224608""
+}"

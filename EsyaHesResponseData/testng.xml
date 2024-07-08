@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <test name="ScheduleData">
+        <classes>
+            <class name="scheduledata.GetBLP3pResponseData"/>
+            <class name="scheduledata.GetBPPResponsedata"/>
+            <!-- Add more test classes as needed -->
+        </classes>
+    </test>
+</suite>

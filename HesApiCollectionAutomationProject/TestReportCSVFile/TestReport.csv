@@ -1,0 +1,2504 @@
+"S_No","API Name","API Link","API Request","Test case Type","Response Time","Expected Status code","Actual Status code","Status","Remark","Request Body"
+"1","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","1230 Milliseconds","200.0","200","Pass","With Full body","{
+    ""Msn"":""-1"",
+    ""EventId"":""1"",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":1,
+    ""Limit"":1000,
+    ""Profile"":1,
+    ""Phase"":3
+}"
+"2","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","526 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"3","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","485 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+    ""Msn"":"""",
+    ""EventId"":""1"",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":1,
+    ""Limit"":1000,
+    ""Profile"":1,
+    ""Phase"":3
+}"
+"4","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","520 Milliseconds","400.0","200","Fail","When Event ID is left blank","{
+    ""Msn"":""-1"",
+    ""EventId"":"""",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":1,
+    ""Limit"":1000,
+    ""Profile"":1,
+    ""Phase"":3
+}"
+"5","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2839 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+    ""Msn"":""-1"",
+    ""EventId"":""1"",
+    ""FromDate"":"""",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":1,
+    ""Limit"":1000,
+    ""Profile"":1,
+    ""Phase"":3
+}"
+"6","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2490 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+    ""Msn"":""-1"",
+    ""EventId"":""1"",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":"""",
+    ""Offset"":1,
+    ""Limit"":1000,
+    ""Profile"":1,
+    ""Phase"":3
+}"
+"7","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","587 Milliseconds","400.0","400","Pass","When offset is left blank","{
+    ""Msn"":""-1"",
+    ""EventId"":""1"",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":,
+    ""Limit"":1000,
+    ""Profile"":1,
+    ""Phase"":3
+}"
+"8","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","479 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+    ""Msn"":""-1"",
+    ""EventId"":""1"",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":1,
+    ""Limit"":,
+    ""Profile"":1,
+    ""Phase"":3
+}"
+"9","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","581 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+    ""Msn"":""-1"",
+    ""EventId"":""1"",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":1,
+    ""Limit"":1000,
+    ""Profile"":,
+    ""Phase"":3
+}"
+"10","BLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","584 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+    ""Msn"":""-1"",
+    ""EventId"":""1"",
+    ""FromDate"":""2024-03-20"",
+    ""ToDate"":""2024-03-25"",
+    ""Offset"":1,
+    ""Limit"":1000,
+    ""Profile"":1,
+    ""Phase"":
+}"
+"11","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","598 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":1,
+""Phase"":3
+
+}"
+"12","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"13","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","472 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":1,
+""Phase"":3
+
+}"
+"14","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2497 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":1,
+""Phase"":3
+
+}"
+"15","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2486 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":1,
+""Phase"":3
+
+}"
+"16","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":1,
+""Phase"":3
+
+}"
+"17","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","470 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":1,
+""Phase"":3
+
+}"
+"18","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","473 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":3
+
+}"
+"19","Command","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":1,
+""Phase"":
+
+}"
+"20","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","482 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"21","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","468 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"22","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","467 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"23","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2482 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"24","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2483 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"25","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","586 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"26","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","518 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":2,
+""Phase"":1
+
+}"
+"27","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","473 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":1
+
+}"
+"28","BPP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","475 Milliseconds","400.0","400","Pass","When phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":
+
+}"
+"29","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","483 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"30","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","472 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"31","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"32","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2489 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"33","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2509 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"34","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","468 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":1
+
+}"
+"35","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","468 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":2,
+""Phase"":1
+
+}"
+"36","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","512 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":1
+
+}"
+"37","BPP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","471 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":2,
+""Phase"":
+
+}"
+"38","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","478 Milliseconds","200.0","200","Pass","With full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":6,
+""Phase"":1
+}"
+"39","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","499 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"40","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","476 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":6,
+""Phase"":1
+}"
+"41","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2486 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":6,
+""Phase"":1
+}"
+"42","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2491 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":6,
+""Phase"":1
+}"
+"43","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","474 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":6,
+""Phase"":1
+}"
+"44","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","470 Milliseconds","400.0","400","Pass","when limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":6,
+""Phase"":1
+}"
+"45","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","470 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":1
+}"
+"46","Event1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","522 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":6,
+""Phase"":
+}"
+"47","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","468 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":3,
+""Phase"":3
+
+}"
+"48","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","474 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"49","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","468 Milliseconds","400.0","400","Pass","when msn is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":3,
+""Phase"":3
+
+}"
+"50","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","471 Milliseconds","400.0","200","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":3,
+""Phase"":3
+
+}"
+"51","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","200","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":3,
+""Phase"":3
+
+}"
+"52","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","479 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":3,
+""Phase"":3
+
+}"
+"53","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","492 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":3,
+""Phase"":3
+
+}"
+"54","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","472 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":3
+
+}"
+"55","Event3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":3,
+""Phase"":
+
+}"
+"56","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","487 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":1
+
+}"
+"57","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","475 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"58","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","473 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":1
+
+}"
+"59","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2574 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":1
+
+}"
+"60","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2488 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":1
+
+}"
+"61","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","474 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":1
+
+}"
+"62","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","468 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":5,
+""Phase"":1
+
+}"
+"63","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","474 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":1
+
+}"
+"64","IP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","485 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":
+
+}"
+"65","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","491 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":3
+
+}"
+"66","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","657 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"67","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","467 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":3
+
+}"
+"68","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2494 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":3
+
+}"
+"69","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2537 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":3
+
+}"
+"70","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","498 Milliseconds","400.0","200","Fail","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":3
+
+}"
+"71","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","493 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":5,
+""Phase"":3
+
+}"
+"72","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2488 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":3
+
+}"
+"73","IP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","476 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":5,
+""Phase"":
+
+}"
+"74","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","1018 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"75","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"76","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","469 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"77","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","472 Milliseconds","400.0","400","Pass","When FromDate is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"78","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2570 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"79","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","472 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"80","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","480 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":4,
+""Phase"":1
+
+}"
+"81","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","467 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":1
+
+}"
+"82","DLP1p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","468 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":
+
+}"
+"83","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","476 Milliseconds","200.0","200","Pass","With Full body","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"84","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","477 Milliseconds","400.0","400","Pass","Without Request Body","unknown cell type"
+"85","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","497 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+""Msn"":"""",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"86","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2529 Milliseconds","400.0","500","Fail","When FromDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":"""",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"87","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","2481 Milliseconds","400.0","500","Fail","When ToDate is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":"""",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"88","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","467 Milliseconds","400.0","400","Pass","When offset is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":1
+
+}"
+"89","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","466 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":,
+""Profile"":4,
+""Phase"":1
+
+}"
+"90","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","506 Milliseconds","400.0","400","Pass","When Profile is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":,
+""Phase"":1
+
+}"
+"91","DLP3p","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","507 Milliseconds","400.0","400","Pass","When Phase is left blank","{
+""Msn"":""-1"",
+""EventId"":"""",
+""FromDate"":""2024-03-20"",
+""ToDate"":""2024-03-25"",
+""Offset"":0,
+""Limit"":1000,
+""Profile"":4,
+""Phase"":
+
+}"
+"92","GetCategorywiseMeterCount","http://10.159.1.19:8001/api/MIS/CategorywiseMeterCount","GET","Positive","480 Milliseconds","200.0","200","Pass","No Request Body Required",""
+"93","GetCategorywiseMeterCount","http://10.159.1.19:8001/api/MIS/CategorywiseMeter","GET","Negative","497 Milliseconds","404.0","404","Pass","Passing Wrong URL",""
+"94","GetMeterCommStatus","http://10.159.1.19:8001/api/MIS/MeterCommStatus","GET","Positive","480 Milliseconds","200.0","200","Pass","With Full body","{
+    ""Msn"":""-1"",
+    ""Offset"":0,
+    ""Limit"":100,
+    ""Tag"":""false""
+}"
+"95","GetMeterCommStatus","http://10.159.1.19:8001/api/MIS/MeterCommStatus","GET","Negative","474 Milliseconds","400.0","200","Fail","When MSN is left blank","{
+    ""Msn"":"""",
+    ""Offset"":0,
+    ""Limit"":100,
+    ""Tag"":""false""
+}"
+"96","GetMeterCommStatus","http://10.159.1.19:8001/api/MIS/MeterCommStatus","GET","Negative","475 Milliseconds","400.0","400","Pass","When offset is left blank","{
+    ""Msn"":""-1"",
+    ""Offset"":,
+    ""Limit"":100,
+    ""Tag"":""false""
+}"
+"97","GetMeterCommStatus","http://10.159.1.19:8001/api/MIS/MeterCommStatus","GET","Negative","582 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+    ""Msn"":""-1"",
+    ""Offset"":0,
+    ""Limit"":,
+    ""Tag"":""false""
+}"
+"98","GetMeterCommStatus","http://10.159.1.19:8001/api/MIS/MeterCommStatus","GET","Negative","476 Milliseconds","400.0","200","Fail","When Tag is left blank","{
+    ""Msn"":""-1"",
+    ""Offset"":0,
+    ""Limit"":100,
+    ""Tag"":""""
+}"
+"99","GetCommNonCommCategoriesCount","http://10.159.1.19:8001/api/MIS/CommNonCommCategoriesCount","GET","Positive","469 Milliseconds","200.0","200","Pass","No Request Body Required",""
+"100","GetCommNonCommCategoriesCount","http://10.159.1.19:8001/api/MIS/CommNonCommCategories","GET","Negative","475 Milliseconds","404.0","404","Pass","Passing Wrong URL",""
+"101","GetTotalMeterCount","http://10.159.1.19:8001/api/MIS/TotalMeters","GET","Positive","469 Milliseconds","200.0","200","Pass","No Request Body Required",""
+"102","GetTotalMeterCount","http://10.159.1.19:8001/api/MIS/TotalMet","GET","Negative","468 Milliseconds","404.0","404","Pass","Passing Wrong URL",""
+"103","GetMeterInfo","http://10.159.1.19:8001/api/Meter/92000557","GET","Positive","524 Milliseconds","200.0","200","Pass","No Request Body Required",""
+"104","GetMeterInfo","http://10.159.1.19:8001/api/Met","GET","Negative","473 Milliseconds","404.0","404","Pass","Passing Wrong URL",""
+"105","SaveBillingData","http://10.159.1.19:8001/api/scheduledata/SaveScheduleData","GET","Positive","471 Milliseconds","200.0","404","Fail","With Full body","[
+  {  
+    ""MeterSerialNo"": ""10001736"",
+    ""ProfileObisCode"": ""1.0.98.1.0.255"",
+ ""MeterCategory"": """",
+    ""registerValues"": [
+      {
+        ""RegisterObisCode"": ""0.0.0.1.2.255"",
+        ""FormattedValue"": ""2023-05-01 07:17:00"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.13.0.0.255"",
+        ""FormattedValue"": ""0.900"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.0.255"",
+        ""FormattedValue"": ""3.430"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.1.255"",
+        ""FormattedValue"": ""3.370"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.0.255"",
+        ""FormattedValue"": ""3.790"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.1.255"",
+        ""FormattedValue"": ""3.730"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.2.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.10.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""0.0.94.91.13.255"",
+        ""FormattedValue"": ""32"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.5.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.6.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.7.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.8.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      }
+    ],
+    ""serverTime"": ""2020-12-01 07:21:48""
+  },
+  {  
+    ""MeterSerialNo"": ""10001737"",
+    ""ProfileObisCode"": ""1.0.98.1.0.255"",
+ ""MeterCategory"": ""D2"",
+    ""registerValues"": [
+      {
+        ""RegisterObisCode"": ""0.0.0.1.2.255"",
+        ""FormattedValue"": ""2023-05-02 07:17:00"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.13.0.0.255"",
+        ""FormattedValue"": ""0.900"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.0.255"",
+        ""FormattedValue"": ""3.430"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.1.255"",
+        ""FormattedValue"": ""3.370"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.0.255"",
+        ""FormattedValue"": ""3.790"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.1.255"",
+        ""FormattedValue"": ""3.730"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.2.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.10.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""0.0.94.91.13.255"",
+        ""FormattedValue"": ""32"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.5.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.6.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.7.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.8.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      }
+    ],
+    ""serverTime"": ""2020-12-01 07:21:48""
+  },
+  {  
+    ""MeterSerialNo"": ""10001738"",
+    ""ProfileObisCode"": ""1.0.98.1.0.255"",
+ ""MeterCategory"": ""D1"",
+    ""registerValues"": [
+      {
+        ""RegisterObisCode"": ""0.0.0.1.2.255"",
+        ""FormattedValue"": ""2020-05-02 07:17:00"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.13.0.0.255"",
+        ""FormattedValue"": ""0.900"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.0.255"",
+        ""FormattedValue"": ""3.430"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.1.255"",
+        ""FormattedValue"": ""3.370"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.0.255"",
+        ""FormattedValue"": ""3.790"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.1.255"",
+        ""FormattedValue"": ""3.730"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.2.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.10.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""0.0.94.91.13.255"",
+        ""FormattedValue"": ""32"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.5.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.6.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.7.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.8.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      }
+    ],
+    ""serverTime"": ""2020-12-01 07:21:48""
+  },
+  {  
+    ""MeterSerialNo"": ""10001740"",
+    ""ProfileObisCode"": ""1.0.98.1.0.255"",
+ ""MeterCategory"": ""D2"",
+    ""registerValues"": [
+      {
+        ""RegisterObisCode"": ""0.0.0.1.2.255"",
+        ""FormattedValue"": ""2020-01-02 07:17:00"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.13.0.0.255"",
+        ""FormattedValue"": ""0.900"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.0.255"",
+        ""FormattedValue"": ""3.430"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.1.255"",
+        ""FormattedValue"": ""3.370"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.0.255"",
+        ""FormattedValue"": ""3.790"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.1.255"",
+        ""FormattedValue"": ""3.730"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.3.255"",
+        ""FormattedValue"": ""0.060"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.8.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.2.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.10.8.0.255"",
+        ""FormattedValue"": ""0"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""3.700"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.1.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.0.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""0.260"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.1.255"",
+        ""FormattedValue"": ""2020-11-17 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.2.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""4.240"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.3.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.4.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.5.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.6.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.7.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.9.6.8.255"",
+        ""FormattedValue"": ""2020-11-19 12:00:00"",
+        ""AttributeId"": 5
+      },
+      {
+        ""RegisterObisCode"": ""0.0.94.91.13.255"",
+        ""FormattedValue"": ""32"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.5.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.6.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.7.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      },
+      {
+        ""RegisterObisCode"": ""1.0.8.8.0.255"",
+        ""FormattedValue"": ""0.000"",
+        ""AttributeId"": 2
+      }
+    ],
+    ""serverTime"": ""2020-12-01 07:21:48""
+  }
+]"
+"106","SaveBillingData","http://10.159.1.19:8001/api/scheduledata/SaveScheduleData","GET","Negative","476 Milliseconds","400.0","404","Fail","Without Request Body",""
+"107","SaveNewMeter","http://10.159.1.19:8001/api/Meter/SaveNewmeter","POST","Positive","2537 Milliseconds","200.0","500","Fail","With Request Body","{
+ ""meterSerialNo"":""23765796"",
+ ""manufacturer"":null,
+ ""firmware"":null,
+ ""meterCategory"":null,
+ ""currentRating"":null,
+ ""ipAddress"":null,
+ ""portNumber"":null,
+ ""latitude"":null,
+ ""longitude"":null,
+    ""cmdType"": ""3""
+}"
+"108","SaveNewMeter","http://10.159.1.19:8001/api/Meter/SaveNewmeter","POST","Negative","473 Milliseconds","400.0","400","Pass","Without Request Body",""
+"109","GetMeterCommStatus","http://10.159.1.19:8001/api/Mis/MeterCommStatus","GET","Positive","471 Milliseconds","200.0","200","Pass","With Request Body","{
+    ""Msn"":""92000578"",
+    ""Offset"":0,
+    ""Limit"":20,
+    ""Tag"":""-1""
+}"
+"110","GetMeterCommStatus","http://10.159.1.19:8001/api/Mis/MeterCommStatus","GET","Negative","495 Milliseconds","400.0","400","Pass","Without Request Body",""
+"111","GetMeterCommStatus","http://10.159.1.19:8001/api/Mis/MeterCommStatus","GET","Negative","472 Milliseconds","400.0","200","Fail","When MSN is left blank","{
+    ""Msn"":"""",
+    ""Offset"":0,
+    ""Limit"":20,
+    ""Tag"":""-1""
+}"
+"112","GetMeterCommStatus","http://10.159.1.19:8001/api/Mis/MeterCommStatus","GET","Negative","477 Milliseconds","400.0","400","Pass","When offset is left blank","{
+    ""Msn"":""92000578"",
+    ""Offset"":,
+    ""Limit"":20,
+    ""Tag"":""-1""
+}"
+"113","GetMeterCommStatus","http://10.159.1.19:8001/api/Mis/MeterCommStatus","GET","Negative","473 Milliseconds","400.0","400","Pass","When Limit is left blank","{
+    ""Msn"":""92000578"",
+    ""Offset"":0,
+    ""Limit"":,
+    ""Tag"":""-1""
+}"
+"114","GetMeterCommStatus","http://10.159.1.19:8001/api/Mis/MeterCommStatus","GET","Negative","474 Milliseconds","400.0","200","Fail","When Tag is left blank","{
+    ""Msn"":""92000578"",
+    ""Offset"":0,
+    ""Limit"":20,
+    ""Tag"":""""
+}"
+"115","GetAssociationContent","http://10.159.1.19:8001/api/Association/MTR001","GET","Positive","480 Milliseconds","200.0","200","Pass","No Request Body Required",""
+"116","SaveAssociation","http://10.159.1.19:8001/api/scheduledata/","GET","Positive","478 Milliseconds","200.0","200","Pass","With Request Body","{
+    ""msn"":""MTR001"",
+    ""content"":""ERTTIRGMMDMFDFMDFDMGFLRGWROESDFRSGSGBSFGDGDSGAEROLV<BBFMDB<GSKGEAGPDGKS<GBC""
+}"
+"117","SaveAssociation","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","473 Milliseconds","400.0","400","Pass","When MSN is left blank","{
+    ""msn"":"""",
+    ""content"":""ERTTIRGMMDMFDFMDFDMGFLRGWROESDFRSGSGBSFGDGDSGAEROLV<BBFMDB<GSKGEAGPDGKS<GBC""
+}"
+"118","SaveAssociation","http://10.159.1.19:8001/api/scheduledata/","GET","Negative","466 Milliseconds","400.0","200","Fail","When content is left blank","{
+    ""msn"":""MTR001"",
+    ""content"":""""
+}"
+"119","Get Employee","http://10.159.1.19:8005/api/employee","GET","Positive","479 Milliseconds","200.0","200","Pass","With Request Body",""
+"120","Get Employee","http://10.159.1.19:8005/api/employee","GET","Negative","485 Milliseconds","401.0","200","Fail","Without Bearer Token",""
+"121","GetById","http://10.159.1.19:8005/api/employee/53","GET","Positive","478 Milliseconds","200.0","204","Fail","Without Request Body",""
+"122","GetById","http://10.159.1.19:8005/api/employee/53","GET","Negative","511 Milliseconds","401.0","204","Fail","Without Bearer Token",""
+"123","Delete","http://10.159.1.19:8005/api/employee/53","GET","Positive","469 Milliseconds","200.0","204","Fail","Without Request Body",""
+"124","Delete","http://10.159.1.19:8005/api/employee/53","GET","Negative","470 Milliseconds","401.0","204","Fail","Without Bearer Token",""
+"125","Save","http://10.159.1.19:8005/api/employee","POST","Positive","476 Milliseconds","200.0","200","Pass","With Request Body","{
+ ""name"": ""Vishesh-1"",
+  ""address1"": ""Mumbai"",
+  ""address2"": null,
+  ""address3"": null,
+  ""city"": null,
+  ""state"": null,
+  ""pincode"": 0,
+  ""mobile"": ""0987654321"",
+  ""gender"": ""M"",
+  ""emailid"": ""Visesh141211@gmail.com"",
+  ""emptype"": null,
+  ""department"": null,
+  ""branch"": null,
+  ""designation"": null,
+  ""modifiedBy"": ""DBAdmin"",
+  ""remark"": null,
+  ""reportingTo"": null,
+  ""roleIds"": ""34""
+}
+"
+"126","Save","http://10.159.1.19:8005/api/employee","POST","Negative","468 Milliseconds","400.0","400","Pass","Without Request Body",""
+"127","Save","http://10.159.1.19:8005/api/employee","POST","Negative","484 Milliseconds","401.0","200","Fail","Without Bearer Token","{
+ ""name"": ""Vishesh-1"",
+  ""address1"": ""Mumbai"",
+  ""address2"": null,
+  ""address3"": null,
+  ""city"": null,
+  ""state"": null,
+  ""pincode"": 0,
+  ""mobile"": ""0987654321"",
+  ""gender"": ""M"",
+  ""emailid"": ""Visesh141211@gmail.com"",
+  ""emptype"": null,
+  ""department"": null,
+  ""branch"": null,
+  ""designation"": null,
+  ""modifiedBy"": ""DBAdmin"",
+  ""remark"": null,
+  ""reportingTo"": null,
+  ""roleIds"": ""34""
+}
+"
+"128","Save","http://10.159.1.19:8005/api/employee","POST","Negative","491 Milliseconds","400.0","200","Fail","When MSN is left blank","{
+ ""name"": """",
+  ""address1"": ""Mumbai"",
+  ""address2"": null,
+  ""address3"": null,
+  ""city"": null,
+  ""state"": null,
+  ""pincode"": 0,
+  ""mobile"": ""0987654321"",
+  ""gender"": ""M"",
+  ""emailid"": ""Visesh141211@gmail.com"",
+  ""emptype"": null,
+  ""department"": null,
+  ""branch"": null,
+  ""designation"": null,
+  ""modifiedBy"": ""DBAdmin"",
+  ""remark"": null,
+  ""reportingTo"": null,
+  ""roleIds"": ""34""
+}
+"
+"129","Save","http://10.159.1.19:8005/api/employee","POST","Negative","481 Milliseconds","400.0","200","Fail","When address1 is left blank","{
+ ""name"": ""Vishesh-1"",
+  ""address1"": """",
+  ""address2"": null,
+  ""address3"": null,
+  ""city"": null,
+  ""state"": null,
+  ""pincode"": 0,
+  ""mobile"": ""0987654321"",
+  ""gender"": ""M"",
+  ""emailid"": ""Visesh141211@gmail.com"",
+  ""emptype"": null,
+  ""department"": null,
+  ""branch"": null,
+  ""designation"": null,
+  ""modifiedBy"": ""DBAdmin"",
+  ""remark"": null,
+  ""reportingTo"": null,
+  ""roleIds"": ""34""
+}
+"
+"130","Save","http://10.159.1.19:8005/api/employee","POST","Negative","491 Milliseconds","400.0","200","Fail","When mobile number is left blank","{
+ ""name"": ""Vishesh-1"",
+  ""address1"": ""Mumbai"",
+  ""address2"": null,
+  ""address3"": null,
+  ""city"": null,
+  ""state"": null,
+  ""pincode"": 0,
+  ""mobile"": """",
+  ""gender"": ""M"",
+  ""emailid"": ""Visesh141211@gmail.com"",
+  ""emptype"": null,
+  ""department"": null,
+  ""branch"": null,
+  ""designation"": null,
+  ""modifiedBy"": ""DBAdmin"",
+  ""remark"": null,
+  ""reportingTo"": null,
+  ""roleIds"": ""34""
+}
+"
+"131","Save","http://10.159.1.19:8005/api/employee","POST","Negative","511 Milliseconds","400.0","200","Fail","When email is left blank","{
+ ""name"": ""Vishesh-1"",
+  ""address1"": ""Mumbai"",
+  ""address2"": null,
+  ""address3"": null,
+  ""city"": null,
+  ""state"": null,
+  ""pincode"": 0,
+  ""mobile"": ""0987654321"",
+  ""gender"": ""M"",
+  ""emailid"": ""Visesh141211@gmail.com"",
+  ""emptype"": null,
+  ""department"": null,
+  ""branch"": null,
+  ""designation"": null,
+  ""modifiedBy"": ""DBAdmin"",
+  ""remark"": null,
+  ""reportingTo"": null,
+  ""roleIds"": ""34""
+}
+"
+"132","Get login","http://10.159.1.19:8005/api/login","GET","Positive","474 Milliseconds","200.0","204","Fail","With Request Body","{
+    ""Username"":""KD000009"",
+    ""Password"":""8ofVJtc89xEvL2HgDxUSzw==""
+}"
+"133","Get login","http://10.159.1.19:8005/api/login","GET","Negative","472 Milliseconds","400.0","204","Fail","Without Request Body","{
+    ""Username"":""KD000009"",
+    ""Password"":""8ofVJtc89xEvL2HgDxUSzw==""
+}"
+"134","Get login","http://10.159.1.19:8005/api/login","GET","Negative","477 Milliseconds","400.0","204","Fail","When user name is left blank","{
+    ""Username"":"""",
+    ""Password"":""8ofVJtc89xEvL2HgDxUSzw==""
+}"
+"135","Get login","http://10.159.1.19:8005/api/login","GET","Negative","480 Milliseconds","400.0","204","Fail","When password field is left blank","{
+    ""Username"":""KD000009"",
+    ""Password"":""""
+}"
+"136","Get login","http://10.159.1.19:8005/api/login","GET","Negative","477 Milliseconds","401.0","401","Pass","Without Bearer Token","{
+    ""Username"":""KD000009"",
+    ""Password"":""8ofVJtc89xEvL2HgDxUSzw==""
+}"
+"137","GetAll","http://10.159.1.19:8005/api/login/all","GET","Positive","474 Milliseconds","200.0","200","Pass","No Request Body Required",""
+"138","GetAll","http://10.159.1.19:8005/api/login/all","GET","Negative","465 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"139","GetByUsername","http://10.159.1.19:8005/api/login/by-username?username=KD000009","GET","Positive","493 Milliseconds","200.0","204","Fail","No Request Body Required",""
+"140","GetByUsername","http://10.159.1.19:8005/api/login/by-username?username=KD000009","GET","Negative","467 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"141","GetByLoginId","http://10.159.1.19:8005/api/login/3","GET","Positive","470 Milliseconds","200.0","204","Fail","No Request Body Required",""
+"142","GetByLoginId","http://10.159.1.19:8005/api/login/3","GET","Negative","473 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"143","Update","http://10.159.1.19:8005/api/login","PUT","Positive","471 Milliseconds","200.0","200","Pass","With Request Body","{
+  ""empId"": 4,
+  ""loginId"":3,
+  ""userName"": ""KD000015"",
+  ""password"": ""8ofVJtc89xEvL2HgDxUSzw=="",
+  ""emailID"": ""Visesh1@gmail.com"",
+  ""modifiedBY"": ""DBAdmin"",
+  ""isBlocked"": false
+}"
+"144","Update","http://10.159.1.19:8005/api/login","PUT","Negative","469 Milliseconds","400.0","400","Pass","Without Request Body",""
+"145","Update","http://10.159.1.19:8005/api/login","PUT","Negative","477 Milliseconds","401.0","401","Pass","Without Bearer Token","{
+  ""empId"": 4,
+  ""loginId"":3,
+  ""userName"": ""KD000015"",
+  ""password"": ""8ofVJtc89xEvL2HgDxUSzw=="",
+  ""emailID"": ""Visesh1@gmail.com"",
+  ""modifiedBY"": ""DBAdmin"",
+  ""isBlocked"": false
+}"
+"146","ChangePassword","http://10.159.1.19:8005/api/login/password","PUT","Positive","471 Milliseconds","200.0","200","Pass","With Request Body","{
+  
+  ""loginId"":3,
+  ""password"": ""8ofVJtc89xEvL2HgDxUSzw=="",
+  ""modifiedBY"": ""DBAdminA""
+}"
+"147","ChangePassword","http://10.159.1.19:8005/api/login/password","PUT","Negative","479 Milliseconds","400.0","400","Pass","Without Request Body",""
+"148","ChangePassword","http://10.159.1.19:8005/api/login/password","PUT","Negative","474 Milliseconds","401.0","400","Fail","Without Bearer Token",""
+"149","Deactivate","http://10.159.1.19:8005/api/login/active-or-deactive","PUT","Positive","481 Milliseconds","200.0","200","Pass","With Request Body","{
+  
+  ""loginId"":3,
+  ""isactive"":true,
+  ""modifiedBY"": ""DBAdminA""
+}"
+"150","Deactivate","http://10.159.1.19:8005/api/login/active-or-deactive","PUT","Negative","476 Milliseconds","400.0","400","Pass","Without Request Body",""
+"151","Deactivate","http://10.159.1.19:8005/api/login/active-or-deactive","PUT","Negative","466 Milliseconds","401.0","401","Pass","Without Bearer Token","{
+  
+  ""loginId"":3,
+  ""isactive"":true,
+  ""modifiedBY"": ""DBAdminA""
+}"
+"152","Delete","http://10.159.1.19:8005/api/login/3","DELETE","Positive","476 Milliseconds","200.0","200","Pass","With Bearer token",""
+"153","Delete","http://10.159.1.19:8005/api/login/3","DELETE","Negative","497 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"154","Authenticate","http://10.159.1.19:8005/api/Login/authenticate","POST","Positive","474 Milliseconds","200.0","400","Fail","No Request Body Required",""
+"155","GETLogin","http://10.159.1.19:8005/api/Admin/Encrypt","GET","Positive","469 Milliseconds","200.0","500","Fail","With Bearer token",""
+"156","GETLogin","http://10.159.1.19:8005/api/Admin/Encrypt","GET","Negative","470 Milliseconds","401.0","400","Fail","Without Bearer Token",""
+"157","Get","http://10.159.1.19:8005/api/Role?roleName=","GET","Positive","475 Milliseconds","200.0","401","Fail","No Request Body Required",""
+"158","RoleRightMapping","http://10.159.1.19:8005/api/role/role-right-mapping","POST","Positive","474 Milliseconds","200.0","500","Fail","With Request Body","{
+    ""RoleId"":36,
+    ""RightIDs"":""1,2,3,4,5,6,7""
+}"
+"159","RoleRightMapping","http://10.159.1.19:8005/api/role/role-right-mapping","POST","Negative","473 Milliseconds","400.0","500","Fail","Without Request Body",""
+"160","RoleRightMapping","http://10.159.1.19:8005/api/role/role-right-mapping","POST","Negative","466 Milliseconds","401.0","401","Pass","Without Bearer Token","{
+    ""RoleId"":36,
+    ""RightIDs"":""1,2,3,4,5,6,7""
+}"
+"161","GetByUserID","http://10.159.1.19:8005/api/role/by-userid?userId=135","GET","Positive","470 Milliseconds","200.0","500","Fail","No Request Body Required",""
+"162","GetByUserID","http://10.159.1.19:8005/api/role/by-userid?userId=135","GET","Negative","467 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"163","Delete","http://10.159.1.19:8005/api/Role?roleName=","DELETE","Positive","476 Milliseconds","200.0","500","Fail","With Bearer token",""
+"164","Delete","http://10.159.1.19:8005/api/Role?roleName=","DELETE","Negative","504 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"165","GetByRoleId","http://10.159.1.19:8005/api/rights/4","GET","Positive","478 Milliseconds","200.0","500","Fail","With Bearer token",""
+"166","GetByRoleId","http://10.159.1.19:8005/api/rights/4","GET","Negative","474 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"167","Delete","http://10.159.1.19:8005/api/rights/11","DELETE","Positive","479 Milliseconds","200.0","200","Pass","With Bearer token",""
+"168","Delete","http://10.159.1.19:8005/api/rights/11","DELETE","Negative","470 Milliseconds","204.0","200","Fail","With Bearer token",""
+"169","Delete","http://10.159.1.19:8005/api/rights/11","DELETE","Negative","540 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"170","Get Menu By UserID","http://10.159.1.19:8005/api/Menu","GET","Positive","518 Milliseconds","200.0","500","Fail","With Bearer token",""
+"171","Get Menu By UserID","http://10.159.1.19:8005/api/Menu","GET","Negative","503 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"172","Get Menu By Menuid","http://10.159.1.19:8005/api/Menu/4","GET","Positive","522 Milliseconds","200.0","500","Fail","With Bearer token",""
+"173","Get Menu By Menuid","http://10.159.1.19:8005/api/Menu/4","GET","Negative","465 Milliseconds","401.0","401","Pass","Without Bearer Token",""
+"174","Delete Get Menu By Menuid Copy","http://10.159.1.19:8005/api/Menu/8","DELETE","Positive","516 Milliseconds","200.0","500","Fail","With Bearer token",""
+"175","Delete Get Menu By Menuid Copy","http://10.159.1.19:8005/api/Menu/8","DELETE","Negative","467 Milliseconds","401.0","405","Fail","Without Bearer Token",""
